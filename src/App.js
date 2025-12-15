@@ -19,6 +19,7 @@ function App() {
     if (user.username === "user" && user.password === "password") {
       setSubmitted(true);
       setWrongCredentials(false);
+      setUser({    username: "",    password: ""  });
     }
     else {
       setWrongCredentials(true);
@@ -37,10 +38,10 @@ function App() {
         {submitted == false ? (
           <form onSubmit={(event) => handleSubmission(event)}>
             <label htmlFor="username">username:</label>
-            <input type="text" required id='username' value={user.first} onChange={(event) => handleInput(event)}></input>
+            <input type="text" required id='username' value={user.username} onChange={(event) => handleInput(event)}></input>
             <br />
             <label htmlFor="password">password:</label>
-            <input type="text" required id='password' value={user.last} onChange={(event) => handleInput(event)}></input>
+            <input type="text" required id='password' value={user.password} onChange={(event) => handleInput(event)}></input>
             <br />
             <button type='submit'>Submit</button>
           </form>
