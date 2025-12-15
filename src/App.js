@@ -37,16 +37,16 @@ function App() {
 
         {submitted == false ? (
           <form onSubmit={(event) => handleSubmission(event)}>
-            <label htmlFor="username">username:</label>
+            <label htmlFor="username">Username</label>
             <input type="text" required id='username' value={user.username} onChange={(event) => handleInput(event)}></input>
             <br />
-            <label htmlFor="password">password:</label>
+            <label htmlFor="password">Password</label>
             <input type="text" required id='password' value={user.password} onChange={(event) => handleInput(event)}></input>
             <br />
             <button type='submit'>Submit</button>
           </form>
         ) : (
-          <h3>welcome, user!</h3>
+          <h3>Welcome, user</h3>
         )}
       </div>
     </>
